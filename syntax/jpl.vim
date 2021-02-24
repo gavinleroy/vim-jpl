@@ -26,8 +26,8 @@ syntax match jplArray "\v\[,\*\]"
 " strings: can't escape "
 syntax region jplString start="\v\"" end="\v\""
 " comments, inline and block
-syntax region jplCommentLine  start="\v//" end="\v\$" contains=jplTodos,@Spell
-syntax region jplCommentBlock start="\v/\*" end="\v\*/" contains=jplTodos,@Spell
+syntax region jplCommentLine  start="//" end="$" contains=jplTodos,@Spell
+syntax region jplCommentBlock start="\*" end="*/" contains=jplTodos,@Spell
 
 " numbers, either Int or FLoat
 syntax match jplNumber "\v<\d+>"
