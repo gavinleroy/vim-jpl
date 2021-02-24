@@ -13,7 +13,7 @@ syntax clear
 " jpl is case sensitive.
 syntax case match
 " keywords
-syntax keyword jplTodos TODO FIXME NOTE
+syntax keyword jplTodo TODO FIXME NOTE
 syntax keyword jplFunction fn
 syntax keyword jplConditional if then else
 syntax keyword jplType int bool float float3 float4
@@ -26,9 +26,9 @@ syntax match jplArray "\v\[,\*\]"
 " strings: can't escape "
 syntax region jplString start="\v\"" end="\v\""
 " comments, inline and block
-syntax region jplCommentLine  start="\v//" end="$" contains=jplTodos,@Spell
-syntax region jplCommentBlock start="\v/\*" end="\v\*/" contains=jplTodos,@Spell
-
+syntax cluster jplCommentGroup contains=jplTodo
+syntax region jplComment start="//" end="$" contains=@jplCommentGroup,@Spell
+syntax region jplComment start="/\*" end="\*/" contains=@goCommentGroup,@Spell
 " numbers, either Int or FLoat
 syntax match jplNumber "\v<\d+>"
 syntax match jplNumber "\v<\d+\.\d*>"
@@ -59,10 +59,9 @@ highlight link jplConditional Conditional
 highlight link jplType Type
 highlight link jplArray Type
 highlight link jplKeyword Keyword
-highlight link jplCommentBlock jplCommentLine
-highlight link jplCommentLine Comment
 highlight link jplBoolean Boolean
 highlight link jplString String
 highlight link jplNumber Number
 highlight link jplOperator Operator
+highlight link jplComment Comment
 
