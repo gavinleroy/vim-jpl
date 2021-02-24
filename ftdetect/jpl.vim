@@ -6,5 +6,10 @@
 " License:     MIT License
 " ============================================================================
 
-autocmd BufRead,BufNewFile *.jpl setfiletype JPL
+autocmd BufRead,BufNewFile *.jpl call s:set_jpl_filetype()
 
+function! s:set_jpl_filetype() abort
+    if &filetype !=# 'jpl'
+        set filetype=jpl
+    endif
+endfunction
