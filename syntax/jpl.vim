@@ -60,7 +60,7 @@ highlight link jplType Type
 highlight link jplArray Type
 highlight link jplKeyword Keyword
 highlight link jplCommentBlock jplCommentLine
-highlight link jplCommentLine Comment
+highlight link jplCommentLine String
 highlight link jplBoolean Boolean
 highlight link jplString String
 highlight link jplNumber Number
