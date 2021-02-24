@@ -63,5 +63,5 @@ highlight link jplBoolean Boolean
 highlight link jplString String
 highlight link jplNumber Number
 highlight link jplOperator Operator
-highlight link jplComment Comment
+highlight link jplComment Type
 
