@@ -29,8 +29,8 @@ syntax region jplString start=/"/ end=/"/
 syntax match jplComment "\v<\\.*>"
 syntax region jplComment start="\v<\*>" end="\v<*/>"
 
-syn region jplCommentLine  start="//" end="$" contains=jplTodos,@Spell
-syn region jplCommentBlock start="/\*" end="\*/" contains=jplTodos,@Spell
+syntax region jplCommentLine  start="//" end="$" contains=jplTodos,@Spell
+syntax region jplCommentBlock start="/\*" end="\*/" contains=jplTodos,@Spell
 
 " numbers, either Int or FLoat
 syntax match jplNumber "\v<\d+>"
