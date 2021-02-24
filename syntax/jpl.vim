@@ -28,6 +28,10 @@ syntax region jplString start=/"/ end=/"/
 " comments, inline and block
 syntax match jplComment "\v<\\.*>"
 syntax region jplComment start="\v<\*>" end="\v<*/>"
+
+syn region jplCommentLine  start="//" end="$" contains=jplTodos,@Spell
+syn region jplCommentBlock start="/\*" end="\*/" contains=jplTodos,@Spell
+
 " numbers, either Int or FLoat
 syntax match jplNumber "\v<\d+>"
 syntax match jplNumber "\v<\d+\.\d*>"
@@ -58,7 +62,8 @@ highlight link jplConditional Conditional
 highlight link jplType Type
 highlight link jplArray Type
 highlight link jplKeyword Keyword
-highlight link jplComment Comment
+highlight link jplCommentBlock jplCommentLine
+highlight link jplCommentLine Comment
 highlight link jplBoolean Boolean
 highlight link jplString String
 highlight link jplNumber Number
