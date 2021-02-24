@@ -63,7 +63,7 @@ hi def link jplArray jplType
 hi def link jplTodo Todo
 hi def link jplFunction Function
 hi def link jplConditional Conditional
-hi def link jplArray Type
+hi def link jplType Type
 hi def link jplKeyword Keyword
 hi def link jplBoolean Boolean
 hi def link jplString String
