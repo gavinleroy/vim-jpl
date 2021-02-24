@@ -27,8 +27,8 @@ syntax match jplArray "\v\[,*\]"
 syntax region jplString start="\v\"" end="\v\""
 " comments, inline and block
 syntax cluster jplCommentGroup contains=jplTodo
-syntax region jplComment start="//" end="$" contains=@jplCommentGroup,@Spell
-syntax region jplComment start="/\*" end="\*/" contains=@goCommentGroup,@Spell
+syntax region jplComment start="\/\/" end="$" contains=@jplCommentGroup,@Spell
+syntax region jplComment start="\/\*" end="\*\/" contains=@goCommentGroup,@Spell
 " numbers, either Int or FLoat
 syntax match jplNumber "\v<\d+>"
 syntax match jplNumber "\v<\d+\.\d*>"
