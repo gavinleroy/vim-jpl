@@ -17,7 +17,8 @@ syntax keyword jplTodos TODO FIXME NOTE
 syntax keyword jplFunction fn
 syntax keyword jplConditional if then else
 syntax keyword jplType int bool float float3 float4
-syntax keyword jplKeyword array sum let assert return attribute 
+syntax keyword jplKeyword array sum 
+syntax keyword jplStatement let assert return attribute 
 syntax keyword jplCommand read write to print show time
 syntax keyword jplBoolean true false
 " to go with the array type
@@ -48,6 +49,9 @@ syntax match jplOperator "-"
 syntax match jplOperator "%"
 syntax match jplOperator "!"
 
+highlight link jplCommand jplKeyword
+highlight link jplStatement jplKeyword
+
 highlight link jplTodo Todo
 highlight link jplFunction Function
 highlight link jplConditional Conditional
@@ -58,4 +62,5 @@ highlight link jplComment Comment
 highlight link jplBoolean Boolean
 highlight link jplString String
 highlight link jplNumber Number
+highlight link jplOperator Operator
 
