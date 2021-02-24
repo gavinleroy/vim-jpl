@@ -9,52 +9,52 @@ elseif exists("b:current_syntax") && b:current_syntax != "jpl"
 endif
 
 " reset syntax highlighting for the current buffer.
-syntax clear
+syn clear
 
 " jpl is case sensitive.
-syntax case match
+syn case match
 
 " keywords
-syntax keyword jplTodo TODO FIXME NOTE
-syntax keyword jplFunction fn
-syntax keyword jplConditional if then else
-syntax keyword jplType int bool float float3 float4
-syntax keyword jplKeyword array sum 
-syntax keyword jplStatement let assert return attribute 
-syntax keyword jplCommand read write to print show time
-syntax keyword jplBoolean true false
+syn keyword jplTodo TODO FIXME NOTE
+syn keyword jplFunction fn
+syn keyword jplConditional if then else
+syn keyword jplType int bool float float3 float4
+syn keyword jplKeyword array sum 
+syn keyword jplStatement let assert return attribute 
+syn keyword jplCommand read write to print show time
+syn keyword jplBoolean true false
 
 " to go with the array type
-syntax match jplArray "\v\[,*\]"
+syn match jplArray "\v\[,*\]"
 
 " strings: can't escape "
-syntax region jplString start="\v\"" end="\v\""
-
-" comments, inline and block
-syntax region jplComment start="//"  end="$"   contains=jplTodo,@Spell
-syntax region jplComment start="/\*" end="\*/" contains=jplTodo,@Spell
-
-" numbers, either Int or FLoat
-syntax match jplNumber "\v<\d+>"
-syntax match jplNumber "\v<\d+\.\d*>"
-syntax match jplNumber "\v<\d*\.\d+>"
+syn region jplString start="\v\"" end="\v\""
 
 " operators
-syntax match jplOperator "="
-syntax match jplOperator "=="
-syntax match jplOperator "!="
-syntax match jplOperator "&&"
-syntax match jplOperator "||"
-syntax match jplOperator "<"
-syntax match jplOperator ">"
-syntax match jplOperator "<="
-syntax match jplOperator ">="
-syntax match jplOperator "+"
-syntax match jplOperator "*"
-syntax match jplOperator "/"
-syntax match jplOperator "-"
-syntax match jplOperator "%"
-syntax match jplOperator "!"
+syn match jplOperator "="
+syn match jplOperator "=="
+syn match jplOperator "!="
+syn match jplOperator "&&"
+syn match jplOperator "||"
+syn match jplOperator "<"
+syn match jplOperator ">"
+syn match jplOperator "<="
+syn match jplOperator ">="
+syn match jplOperator "+"
+syn match jplOperator "*"
+syn match jplOperator "/"
+syn match jplOperator "-"
+syn match jplOperator "%"
+syn match jplOperator "!"
+
+" comments, inline and block
+syn region jplComment start="//"  end="$"   contains=jplTodo,@Spell
+syn region jplComment start="/\*" end="\*/" contains=jplTodo,@Spell
+
+" numbers, either Int or FLoat
+syn match jplNumber "\v<\d+>"
+syn match jplNumber "\v<\d+\.\d*>"
+syn match jplNumber "\v<\d*\.\d+>"
 
 hi def link jplCommand jplKeyword
 hi def link jplStatement jplKeyword
