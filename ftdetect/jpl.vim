@@ -6,5 +6,5 @@
 " License:     MIT License
 " ============================================================================
 
-au BufNewFile,BufRead *.jpl set setfiletype JPL
+au BufNewFile,BufRead *.jpl setfiletype JPL
 
