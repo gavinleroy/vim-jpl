@@ -22,15 +22,12 @@ syntax keyword jplStatement let assert return attribute
 syntax keyword jplCommand read write to print show time
 syntax keyword jplBoolean true false
 " to go with the array type
-syntax match jplArray "\v<[,*]>"
+syntax match jplArray "\v\[,\*]"
 " strings: can't escape "
-syntax region jplString start=/"/ end=/"/
+syntax region jplString start="\v\"" end="\v\""
 " comments, inline and block
-syntax match jplComment "\v<\\.*>"
-syntax region jplComment start="\v<\*>" end="\v<*/>"
-
-syntax region jplCommentLine  start="//" end="$" contains=jplTodos,@Spell
-syntax region jplCommentBlock start="/\*" end="\*/" contains=jplTodos,@Spell
+syntax region jplCommentLine  start="\v//" end="\v$" contains=jplTodos,@Spell
+syntax region jplCommentBlock start="\v/\*" end="\v\*/" contains=jplTodos,@Spell
 
 " numbers, either Int or FLoat
 syntax match jplNumber "\v<\d+>"
