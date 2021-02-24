@@ -51,10 +51,10 @@ syn match jplOperator "!"
 syn region jplComment start="//"  end="$"   contains=jplTodo,@Spell
 syn region jplComment start="/\*" end="\*/" contains=jplTodo,@Spell
 
-" numbers, either Int or FLoat
+" numeric literals
+syn match jplNumber "\v<\d+>"
 syn match jplFloat  "\v<\d+\.\d*>"
 syn match jplFloat  "\v<\d*\.\d+>"
-syn match jplNumber "\v<\d+>"
 
 hi def link jplCommand   jplKeyword
 hi def link jplStatement jplKeyword
