@@ -3,7 +3,8 @@ vim jpl
 
 *vim-jpl* is a [Vim](<http://www.vim.org>) plugin for
 [JPL](< https://github.com/utah-cs4470-sp21/jpl/blob/main/spec.md>), an
-array based toy language for the compilers course at the University of Utah.
+array based language created by [Pavel Panchekha](<https://pavpanchekha.com/>)
+and [John Regehr](<https://www.cs.utah.edu/~regehr/>) at the University of Utah.
 
 Features
 --------
