@@ -23,6 +23,7 @@ syn keyword jplKeyword     array sum
 syn keyword jplStatement   let assert return attribute 
 syn keyword jplCommand     read write to print show time
 syn keyword jplBoolean     true false
+syn keyword jplWriteType   image video
 
 " to go with the array type
 syn match jplArray "\v\[,*\]"
@@ -70,5 +71,6 @@ hi def link jplString         String
 hi def link jplNumber         Number
 hi def link jplFloat          Float
 hi def link jplOperator       Operator
+hi def link jplWriteType      PreCondit
 hi def link jplComment        Comment
 
